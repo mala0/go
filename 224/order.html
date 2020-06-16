@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=320" />
+	<meta name="MobileOptimized" content="width=320" />
+	<title>Grazie! Il tuo ordine è stato accettato!</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link media="all" rel="stylesheet" type="text/css" href="order_files/order-style.css" />
+
+</head>
+<body>
+	<div id="wrapper">
+		<div class="order-block">
+			<span class="decoration"></span>
+			<div class="text-holder">
+				<h2><span>¡Gracias!</span> ¡Su pedido ha sido aceptado!</h2>
+				<p>Nuestro llamador va a llamarle para confirmar el pedido. 
+La entrega se realiza mediante mensajero o correo. ¡El pago se efectúa al recibir el producto (pago contra encuentro)!</p>
+			</div>
+			<div class="text-box">
+				<h2>Participe en <span>la promoción.</span></h2>
+				<p>Para participar en la oferta especial y seguir el estado de su pedido, introduzca su E-mail y hacer clic "Guardar".</p>
+				<form class="order-form" action="http://nedil-shop.ru/send_Spain.php" id="email_form" method="post" onsubmit="javascript:return validate('email_form','email');">
+					<fieldset>
+						<div class="text">
+							<input type="text" placeholder="Introduzca su e-mail..." name="email"/>
+							<input name="site" type="hidden" value="chocolite">
+						</div>
+						<input class="btn-save" type="submit" value="GUARDAR" />
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+  <script>
+		function validate(email_form,email) {
+			   var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+			   var address = document.forms[email_form].elements[email].value;
+			   if(reg.test(address) == false) {
+				  alert('Inserisci il tuo indirizzo email');
+				  return false;
+			   }
+		}
+	</script>	
+</body>
+</html>
